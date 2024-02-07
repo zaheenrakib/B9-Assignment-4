@@ -38,3 +38,44 @@ function checkName(name) {
 }
 */
 
+/*-------------------------------------------------------------------------------*/
+
+///Here is one Bug like NaN is always active it not remove
+
+// function deleteInvalids(array) {
+//     if(!Array.isArray(array)){
+//         return "Invalid Array";
+//     }
+//     var array_2 = [];
+//     for (var i = 0, length = array.length; i < length; i++) {
+//         if(typeof array[i] == "number"){
+//             array_2.push(array[i]);
+//         }
+
+//     }
+//     return array_2;
+// }
+// console.log(deleteInvalids([1 , null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
+// console.log(deleteInvalids(1));
+
+
+
+/******************************************************************************************************* */
+// 4
+// ----------------------------------------Here is Some problem ------------------------------------------
+//-----------------------------------------Birtday validation is not working---------------------
+function password(obj) {
+   if(obj.hasOwnProperty("name") && obj.hasOwnProperty("birthYear") && obj.hasOwnProperty("siteName") == false){
+    return "invalid"
+   }
+   const birth = obj.birthYear;
+   
+    let str = obj.siteName;
+    let name = str.charAt(0).toUpperCase() + str.slice(1);
+    return name + "#" + obj.name + "@" + obj.birthYear;
+}
+
+const obj = { name: "kolimuddin" , birthYear: 1994 , siteName: "google" }
+console.log(password(obj));
+console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google"}));
+console.log(password({ name: "rahat" , birthYear: 202, siteName: "Facebook" }));
