@@ -91,14 +91,23 @@ console.log(password(obj));*/
 /*--------------------------------------------------------five -------------------------------------------*/
 
 
-// function monthlySavings(arr , livingCost) {
-//     if (!Array.isArray(arr)){
-//         console.log("Invalid Input");
-//     }
-//     if(typeof livingCost !== "number"){
-//         return "Invalid Input";
-//     }
-    
+function monthlySavings(arr , livingCost) {
+    if (!Array.isArray(arr)){
+        console.log("Invalid Input");
+    }
+    if(typeof livingCost !== "number"){
+        return "Invalid Input";
+    }
+    let totalEarn = 0;
+    for(let i = 0; i < arr.length;i++){
+        if(arr[i] >= 3000){
+          const  disCount = arr[i] 
+        }
+        totalEarn = totalEarn + arr[i];
 
-// }
-// console.log(monthlySavings([89],45));
+    }
+    const Saveing = totalEarn - livingCost;
+    return `Total Saveing: ${Saveing}`;
+
+}
+console.log(monthlySavings([3400,5400,3400],4500));
