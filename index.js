@@ -1,25 +1,17 @@
-/*--------------------------------------------------------------------------*/
-/*
+// First Completed
 function calculateMoney(ticketSale) {
-    if (ticketSale < 0){
-       return "Invaild Number";
+    if (ticketSale < 0) {
+        return "Invaild Number";
     }
     const totalEarn = ticketSale * 120;
     const totalCost = (8 * 50) + 500;
     const calculate = totalEarn - totalCost;
-    return calculate; 
-    
+    return calculate;
+
 }
+// End First/*-----------------------------------------------------------------------------*/
 
-const ticket = calculateMoney(10);
-console.log(ticket);
-*/
-/*-----------------------------------------------------------------------------*/
-
-
-
-/*------------------------------------------------------------------------------*/
-
+// Start Second
 /*
 
 function checkName(name) {
@@ -34,80 +26,67 @@ function checkName(name) {
             return "Bad Name";
         }
     }
+}
+*/
+//End Second /*-------------------------------------------------------------------------------*/
 
+// start Third
+/*
+function deleteInvalids(array) {
+    if(!Array.isArray(array)){
+        return "Invalid Array";
+    }
+    var array_2 = [];
+    for (var i = 0, length = array.length; i < length; i++) {
+        if(typeof array[i] === "number" && !isNaN(array[i])){
+            array_2.push(array[i]);
+        }
+    }
+    return array_2;
 }
 */
 
-/*-------------------------------------------------------------------------------*/
+//End third /******************************************************************************************************* */
 
-///Here is one Bug like NaN is always active it not remove
-
-// function deleteInvalids(array) {
-//     if(!Array.isArray(array)){
-//         return "Invalid Array";
-//     }
-//     var array_2 = [];
-//     for (var i = 0, length = array.length; i < length; i++) {
-//         if(typeof array[i] == "number"){
-//             array_2.push(array[i]);
-//         }
-
-//     }
-//     return array_2;
-// }
-// console.log(deleteInvalids([1 , null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
-// console.log(deleteInvalids(1));
-
-
-
-/******************************************************************************************************* */
-// 4
-// ----------------------------------------Here is Some problem ------------------------------------------
-//-----------------------------------------Birtday validation is not working---------------------
 /*
 function password(obj) {
-   if(obj.hasOwnProperty("name") && obj.hasOwnProperty("birthYear") && obj.hasOwnProperty("siteName") == false){
-    return "invalid"
-   }
-   const birth = Object.values(obj.birthYear);
-   console.log(birth);
-   if(birth <= 4){
-    console.log("bit big");
-   }
-   
-    // let str = obj.siteName;
-    // let name = str.charAt(0).toUpperCase() + str.slice(1);
-    // return name + "#" + obj.name + "@" + obj.birthYear;
+    if (obj.hasOwnProperty("name") && obj.hasOwnProperty("birthYear") && obj.hasOwnProperty("siteName") == false) {
+        return "Invalid";
+    }
+
+    if (typeof obj.birthYear !== 'number' || String(obj.birthYear).length !== 4) {
+        return "Invalid";
+    }
+
+    let str = obj.siteName;
+    let name = str.charAt(0).toUpperCase() + str.slice(1);
+    return name + "#" + obj.name + "@" + obj.birthYear;
 }
-
-const obj = { name: "kolimuddin" , birthYear: 1994 , siteName: "google" }
-console.log(password(obj));*/
-// console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google"}));
-// console.log(password({ name: "rahat" , birthYear: 202, siteName: "Facebook" }));
-
-
-
+*/
 
 /*--------------------------------------------------------five -------------------------------------------*/
 
 
-function monthlySavings(arr , livingCost) {
-    if (!Array.isArray(arr)){
+function monthlySavings(arr, livingCost) {
+    if (!Array.isArray(arr)) {
         console.log("Invalid Input");
     }
-    if(typeof livingCost !== "number"){
+    if (typeof livingCost !== "number") {
         return "Invalid Input";
     }
     let totalEarn = 0;
-    for(let i = 0; i < arr.length;i++){
-        if(arr[i] >= 3000){
-          const  disCount = arr[i] 
-        }
+    for (let i = 0; i < arr.length; i++) {
         totalEarn = totalEarn + arr[i];
-
     }
     const Saveing = totalEarn - livingCost;
-    return `Total Saveing: ${Saveing}`;
+
+    if(Saveing >= 0 ){
+        return `Total Saveing: ${Saveing}`;
+    }
+    else{
+        return "Earn More";
+    }
+    
 
 }
-console.log(monthlySavings([3400,5400,3400],4500));
+console.log(monthlySavings([3400, 5400, 3400], 40500));
