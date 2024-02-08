@@ -74,19 +74,26 @@ function monthlySavings(arr, livingCost) {
     if (typeof livingCost !== "number") {
         return "Invalid Input";
     }
-    let totalEarn = 0;
-    for (let i = 0; i < arr.length; i++) {
-        totalEarn = totalEarn + arr[i];
-    }
-    const Saveing = totalEarn - livingCost;
 
-    if(Saveing >= 0 ){
-        return `Total Saveing: ${Saveing}`;
+    let totalEarn = 0;
+    for (let disCount of arr) {
+        if (disCount >= 3000) {
+            const totalDis = (20 * disCount) / 100;
+            totalEarn = totalEarn + (disCount - totalDis);
+        } else {
+            totalEarn = totalEarn + disCount;
+        }
     }
-    else{
+
+    const savings = totalEarn - livingCost;
+    if (savings >= 0) {
+        return `Total Savings: ${savings}`;
+    } else {
         return "Earn More";
     }
     
 
 }
-console.log(monthlySavings([3400, 5400, 3400], 40500));
+console.log(monthlySavings([ 1000 , 2000 , 3000 ] , 54000));
+
+
