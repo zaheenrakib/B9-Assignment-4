@@ -64,18 +64,41 @@ function checkName(name) {
 // 4
 // ----------------------------------------Here is Some problem ------------------------------------------
 //-----------------------------------------Birtday validation is not working---------------------
+/*
 function password(obj) {
    if(obj.hasOwnProperty("name") && obj.hasOwnProperty("birthYear") && obj.hasOwnProperty("siteName") == false){
     return "invalid"
    }
-   const birth = obj.birthYear;
+   const birth = Object.values(obj.birthYear);
+   console.log(birth);
+   if(birth <= 4){
+    console.log("bit big");
+   }
    
-    let str = obj.siteName;
-    let name = str.charAt(0).toUpperCase() + str.slice(1);
-    return name + "#" + obj.name + "@" + obj.birthYear;
+    // let str = obj.siteName;
+    // let name = str.charAt(0).toUpperCase() + str.slice(1);
+    // return name + "#" + obj.name + "@" + obj.birthYear;
 }
 
 const obj = { name: "kolimuddin" , birthYear: 1994 , siteName: "google" }
-console.log(password(obj));
-console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google"}));
-console.log(password({ name: "rahat" , birthYear: 202, siteName: "Facebook" }));
+console.log(password(obj));*/
+// console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google"}));
+// console.log(password({ name: "rahat" , birthYear: 202, siteName: "Facebook" }));
+
+
+
+
+/*--------------------------------------------------------five -------------------------------------------*/
+
+
+// function monthlySavings(arr , livingCost) {
+//     if (!Array.isArray(arr)){
+//         console.log("Invalid Input");
+//     }
+//     if(typeof livingCost !== "number"){
+//         return "Invalid Input";
+//     }
+    
+
+// }
+// console.log(monthlySavings([89],45));
